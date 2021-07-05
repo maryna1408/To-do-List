@@ -1,0 +1,15 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.todos.new>.todo {
+  background-color: lightblue;
+}
+.todos.process>.todo {
+  background-color: lightpink;
+}
+.todos.completed>.todo {
+  background-color: lightgreen;
+}
