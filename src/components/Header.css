@@ -1,0 +1,14 @@
+.header{
+    padding: 20px 5px;
+    background-color: lightgoldenrodyellow;
+    margin: 20px 0;
+}
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

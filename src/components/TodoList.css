@@ -2,14 +2,22 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex: 1;
   padding: 20px;
 }
-.todos.new>.todo {
+.status{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.todos.new {
   background-color: lightblue;
 }
-.todos.process>.todo {
+.todos.process {
   background-color: lightpink;
 }
-.todos.completed>.todo {
+.todos.done {
   background-color: lightgreen;
 }

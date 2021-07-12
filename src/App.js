@@ -1,22 +1,22 @@
 import './App.css';
 import React, { useEffect } from 'react'
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import TodoList from './components/TodoList';
 import AddTodo from './components/AddTodo';
-
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="container">
       <Switch>
         <Route exact path="/">
-          <h1>List</h1>
+          <Header></Header>
+          {/* <h1>List</h1> */}
           <div className="todos-wrapper">
-            <TodoList status="new"></TodoList>
-            <TodoList status="process"></TodoList>
-            <TodoList status="completed"></TodoList>
+            <TodoList status={1}></TodoList>
+            <TodoList status={2}></TodoList>
+            <TodoList status={3}></TodoList>
           </div>
-          <AddTodo></AddTodo>
         </Route>
         <Route path="/add">
           <h1>Add</h1>
