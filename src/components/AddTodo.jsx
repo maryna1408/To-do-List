@@ -1,7 +1,7 @@
 import { addTodo } from "../api/crud";
+import { determinePriority } from "../utils/common";
 import { useTodos } from "./../hooks/useTodos";
 import './AddTodo.css'
-import Header from "./Header";
 
 
 export default function AddTodo() {
@@ -11,6 +11,7 @@ export default function AddTodo() {
     const newTodo = {
       title: event.target.title.value.trim(),
       text: event.target.text.value.trim(),
+      priority: Number(event.target.priority.value),
       status: 1,
       createdAt: Date.now(),
       updatedAt: null,
@@ -26,10 +27,10 @@ export default function AddTodo() {
       <h2>Add todo</h2>
       <input placeholder="Title" type="text" name="title" required />
       <textarea placeholder="Text..." name="text" cols="30" rows="10"></textarea>
-      <select name="selectPriority">
-        <option value="value1">1</option>
-        <option value="value2" selected>2</option>
-        <option value="value3">3</option>
+      <select name="priority" defaultValue="2">
+        <option value="1">{determinePriority(1)}</option>
+        <option value="2">{determinePriority(2)}</option>
+        <option value="3">{determinePriority(3)}</option>
       </select>
       <button className="addBtn" type="submit">Save</button>
     </form>

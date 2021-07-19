@@ -2,8 +2,11 @@
     padding: 12px;
     border: 5px solid #fff;
     position: relative;
-    height: 120px;
+    height: 152px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .deleteBtn{
     border: transparent;
@@ -21,14 +24,12 @@
 .title{
     font-size: 18px;
     font-weight: 500;
-    padding-bottom: 10px;
 }
 .text{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-.nextBtn{
-    margin-top: 10px;
+    height: 2em;
+    word-break: break-all;
 }

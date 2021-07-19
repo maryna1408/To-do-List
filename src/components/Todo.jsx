@@ -41,7 +41,7 @@ export default function Todo({ todo }) {
       </button>
       <h2 className="title">{todo.title}</h2>
       <h3 className="text">{todo.text}</h3>
-      {/* <h4>Priority: {determinePriority(priority)}</h4> */}
+      <h4>Priority: {determinePriority(todo.priority)}</h4>
       {todo.status < 3 && (
         <button className="nextBtn" onClick={nextStatus} disabled={disabledNextBtn}>
           Next

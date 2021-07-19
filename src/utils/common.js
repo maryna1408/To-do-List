@@ -11,6 +11,19 @@ export function determineStatus(status) {
     }
 }
 
+export function termineStatus(status) {
+    switch (status) {
+        case 'new':
+            return 1
+        case 'process':
+            return 2
+        case 'done':
+            return 3
+        default:
+            throw new Error('Unknown status!')
+    }
+}
+
 export function determinePriority(priority) {
     switch (priority) {
         case 1:
