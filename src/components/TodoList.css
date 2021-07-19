@@ -1,11 +1,17 @@
 .todos {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.todos-content {
   display: flex;
   flex-direction: column;
   gap: 30px;
   flex: 1;
-  padding: 20px;
 }
-.status{
+.status {
   font-size: 20px;
   display: flex;
   justify-content: center;
